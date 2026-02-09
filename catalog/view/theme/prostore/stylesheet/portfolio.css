@@ -98,18 +98,35 @@
 	line-height: 1.4;
 }
 
+/* Override theme's fancybox caption hiding for portfolio module */
+.portfolio-featured .fancybox-caption,
+.portfolio-list .fancybox-caption,
+.portfolio-featured .fancybox-infobar,
+.portfolio-list .fancybox-infobar {
+	display: block !important;
+	opacity: 1 !important;
+}
+
+/* Make caption visible with proper styling */
+.portfolio-featured .fancybox-caption::before,
+.portfolio-list .fancybox-caption::before {
+	display: none !important;
+}
+
 /* Fancybox Title and Description styling */
 .fancybox-title {
 	font-size: 18px;
 	font-weight: 600;
 	color: #fff;
 	margin-bottom: 8px;
+	display: block !important;
 }
 
 .fancybox-description {
 	font-size: 14px;
 	color: #e0e0e0;
 	line-height: 1.5;
+	display: block !important;
 }
 
 /* Portfolio List Page */

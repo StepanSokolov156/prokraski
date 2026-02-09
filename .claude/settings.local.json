@@ -28,7 +28,9 @@
       "Bash(git add -A)",
       "Bash(git commit -m \"Update Portfolio: fixed height with adaptive width for images\n\n- Removed forced resize for thumbnails, now using original images\n- CSS: fixed height \\(300px\\) with object-fit: cover for centered crop\n- All portfolio images now maintain consistent height while preserving aspect ratio\")",
       "Bash(powershell.exe -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\stepa\\\\Desktop\\\\prokraski.com\\\\upload-image-fix.ps1\")",
-      "Bash(git commit -m \"Add portfolio description display in Fancybox modal\n\n- Added description display below image in popup\n- Created description_plain field \\(without HTML tags\\) for data attributes\n- Updated both gallery and list templates\n- Added CSS styles for title and description styling\")"
+      "Bash(git commit -m \"Add portfolio description display in Fancybox modal\n\n- Added description display below image in popup\n- Created description_plain field \\(without HTML tags\\) for data attributes\n- Updated both gallery and list templates\n- Added CSS styles for title and description styling\")",
+      "Bash(powershell.exe -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\stepa\\\\Desktop\\\\prokraski.com\\\\upload-description-feature.ps1\")",
+      "Bash(git commit -m \"Fix Fancybox caption display - override theme CSS\n\n- Added !important rules to override theme''s fancybox caption hiding\n- Made styles specific to portfolio module to avoid conflicts\n- Set display: block and opacity: 1 for captions\")"
     ]
   }
 }
