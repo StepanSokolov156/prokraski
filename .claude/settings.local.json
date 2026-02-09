@@ -3,7 +3,21 @@
     "allow": [
       "Bash(git init)",
       "Bash(git add .)",
-      "Bash(git commit -m \"Initial commit: ocStore 3.0.3.7 with ProStore theme\")"
+      "Bash(git commit -m \"Initial commit: ocStore 3.0.3.7 with ProStore theme\")",
+      "Bash(git config user.name \"StepanSokolov156\")",
+      "Bash(git config user.email \"stepan_sokolov@mail.ru\")",
+      "Bash(gh --version)",
+      "Bash(curl --version)",
+      "Bash(git remote add origin https://github.com/StepanSokolov156/prokraski.git)",
+      "Bash(git branch -M main)",
+      "Bash(git push -u origin main)",
+      "Bash(ssh -V)",
+      "Bash(ssh -o StrictHostKeyChecking=no -o ConnectTimeout=10 vh11830_guest@85.119.149.127 \"pwd && ls -la www/prokraski.com 2>&1 | head -20\")",
+      "Bash(powershell.exe -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\stepa\\\\Desktop\\\\prokraski.com\\\\upload-ftp.ps1\")",
+      "Bash(sshpass -V)",
+      "Bash(powershell.exe -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\stepa\\\\Desktop\\\\prokraski.com\\\\test-ssh.ps1\")",
+      "Bash(powershell.exe -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\stepa\\\\Desktop\\\\prokraski.com\\\\test-ftp.ps1\")",
+      "Bash(powershell.exe -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\stepa\\\\Desktop\\\\prokraski.com\\\\test-upload-ftp.ps1\")"
     ]
   }
 }

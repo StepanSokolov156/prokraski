@@ -1,0 +1,52 @@
+<link href="catalog/view/theme/prostore/stylesheet/portfolio.css" rel="stylesheet" />
+<!-- Portfolio Gallery -->
+<div class="portfolio-featured">
+  <div class="container-fluid">
+    {% if heading_title %}
+    <span class="h2 portfolio-featured__title">{{ heading_title }}</span>
+    {% endif %}
+    <div class="portfolio-featured__grid">
+      {% for portfolio in portfolios %}
+      <div class="portfolio-featured__item">
+        <a class="portfolio-featured__link js-portfolio-popup" href="{{ portfolio.popup }}" data-caption="{{ portfolio.title }}">
+          <div class="portfolio-featured__item-image">
+            <img src="{{ portfolio.thumb }}" alt="{{ portfolio.title }}" loading="lazy" />
+          </div>
+        </a>
+        {% if portfolio.description %}
+        <span class="portfolio-featured__item-caption">{{ portfolio.description }}</span>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript"><!--
+$(document).ready(function() {
+	// Initialize Fancybox for portfolio images
+	$('.js-portfolio-popup').fancybox({
+		buttons: [
+			'zoom',
+			'slideShow',
+			'fullScreen',
+			'thumbs',
+			'close'
+		],
+		loop: true,
+		protect: true,
+		caption : function( instance, item ) {
+			return $(this).data('caption');
+		},
+		afterLoad: function(instance, current) {
+			// Add caption below image
+			if (current.opts.$content) {
+				var caption = current.opts.caption;
+				if (caption) {
+					current.opts.$content.append('<div class="fancybox-caption-custom">' + caption + '</div>');
+				}
+			}
+		}
+	});
+});
+//--></script>
