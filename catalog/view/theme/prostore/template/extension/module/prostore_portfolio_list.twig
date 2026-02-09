@@ -1,5 +1,26 @@
 {{ header }}{% set col = column_left ? 9 : 12 %}{% set col = column_right ? col - 3 : col %}
 <link href="catalog/view/theme/prostore/stylesheet/portfolio.css" rel="stylesheet" />
+<style type="text/css">
+/* Override theme's fancybox caption hiding - inline styles for priority */
+.portfolio-list .fancybox-caption {
+	display: block !important;
+	opacity: 1 !important;
+	bottom: 0 !important;
+}
+.fancybox-title {
+	display: block !important;
+	font-size: 18px;
+	font-weight: 600;
+	color: #fff;
+	margin-bottom: 8px;
+}
+.fancybox-description {
+	display: block !important;
+	font-size: 14px;
+	color: #e0e0e0;
+	line-height: 1.5;
+}
+</style>
 <!-- Main :: Start-->
 <main class="main">
 	<!-- Breadcrumbs :: Start-->

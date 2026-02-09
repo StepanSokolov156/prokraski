@@ -30,7 +30,10 @@
       "Bash(powershell.exe -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\stepa\\\\Desktop\\\\prokraski.com\\\\upload-image-fix.ps1\")",
       "Bash(git commit -m \"Add portfolio description display in Fancybox modal\n\n- Added description display below image in popup\n- Created description_plain field \\(without HTML tags\\) for data attributes\n- Updated both gallery and list templates\n- Added CSS styles for title and description styling\")",
       "Bash(powershell.exe -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\stepa\\\\Desktop\\\\prokraski.com\\\\upload-description-feature.ps1\")",
-      "Bash(git commit -m \"Fix Fancybox caption display - override theme CSS\n\n- Added !important rules to override theme''s fancybox caption hiding\n- Made styles specific to portfolio module to avoid conflicts\n- Set display: block and opacity: 1 for captions\")"
+      "Bash(git commit -m \"Fix Fancybox caption display - override theme CSS\n\n- Added !important rules to override theme''s fancybox caption hiding\n- Made styles specific to portfolio module to avoid conflicts\n- Set display: block and opacity: 1 for captions\")",
+      "Bash(powershell.exe -Command \"$ftp = [System.Net.FtpWebRequest]::Create\\(''ftp://85.119.149.127/www/prokraski.com/catalog/view/theme/prostore/stylesheet/portfolio.css''\\); $ftp.Credentials = New-Object System.Net.NetworkCredential\\(''vh11830'', ''62lSAm1r8u''\\); $ftp.Method = ''Upload''; $ftp.UseBinary = $true; $ftp.KeepAlive = $false; $content = [System.IO.File]::ReadAllBytes\\(''C:\\\\Users\\\\stepa\\\\Desktop\\\\prokraski.com\\\\catalog\\\\view\\\\theme\\\\prostore\\\\stylesheet\\\\portfolio.css''\\); $s = $ftp.GetRequestStream\\(\\); $s.Write\\($content, 0, $content.Length\\); $s.Close\\(\\); $ftp.GetResponse\\(\\).Close\\(\\); Write-Host ''Uploaded: portfolio.css''\")",
+      "Bash(powershell.exe -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\stepa\\\\Desktop\\\\prokraski.com\\\\upload-css-fix.ps1\")",
+      "Bash(git commit -m \"Fix Fancybox caption display - use inline styles for higher priority\n\n- Added inline <style> tags in templates to override app.min.css\n- Inline styles have higher priority than external CSS files\n- This ensures fancybox caption is visible in portfolio module\")"
     ]
   }
 }
