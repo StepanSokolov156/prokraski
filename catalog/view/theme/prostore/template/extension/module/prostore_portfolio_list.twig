@@ -30,7 +30,7 @@
 						{% for portfolio in portfolios %}
 						<li>
 							<div class="portfolio-list__item">
-								<a class="portfolio-list__link js-portfolio-popup" href="{{ portfolio.popup }}" data-caption="{{ portfolio.title }}">
+								<a class="portfolio-list__link js-portfolio-popup" href="{{ portfolio.popup }}" data-caption="{{ portfolio.title }}" data-description="{{ portfolio.description_plain }}">
 									<div class="portfolio-list__image">
 										<img src="{{ portfolio.thumb }}" alt="{{ portfolio.title }}" loading="lazy" />
 									</div>
@@ -73,16 +73,17 @@ $(document).ready(function() {
 		loop: true,
 		protect: true,
 		caption : function( instance, item ) {
-			return $(this).data('caption');
+			var caption = $(this).data('caption');
+			var description = $(this).data('description');
+
+			// Return both title and description
+			if (description) {
+				return '<div class="fancybox-title">' + caption + '</div><div class="fancybox-description">' + description + '</div>';
+			}
+			return caption;
 		},
 		afterLoad: function(instance, current) {
-			// Add caption below image
-			if (current.opts.$content) {
-				var caption = current.opts.caption;
-				if (caption) {
-					current.opts.$content.append('<div class="fancybox-caption-custom">' + caption + '</div>');
-				}
-			}
+			// Custom caption styling is handled by caption function
 		}
 	});
 });

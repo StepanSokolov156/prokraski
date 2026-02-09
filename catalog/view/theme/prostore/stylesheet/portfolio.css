@@ -98,6 +98,20 @@
 	line-height: 1.4;
 }
 
+/* Fancybox Title and Description styling */
+.fancybox-title {
+	font-size: 18px;
+	font-weight: 600;
+	color: #fff;
+	margin-bottom: 8px;
+}
+
+.fancybox-description {
+	font-size: 14px;
+	color: #e0e0e0;
+	line-height: 1.5;
+}
+
 /* Portfolio List Page */
 .portfolio-list {
 	padding: 20px 0 60px;

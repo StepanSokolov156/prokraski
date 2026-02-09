@@ -37,12 +37,16 @@ class ControllerExtensionModuleProstorePortfolio extends Controller {
 				$thumb = 'image/placeholder.png';
 			}
 
+			// Plain text description for data attribute (strip HTML tags)
+			$description_plain = strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8'));
+
 			$data['portfolios'][] = array(
-				'portfolio_id' => $result['portfolio_id'],
-				'title'       => $result['title'],
-				'description' => html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8'),
-				'thumb'       => $thumb,
-				'popup'       => $popup
+				'portfolio_id'     => $result['portfolio_id'],
+				'title'            => $result['title'],
+				'description'      => html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8'),
+				'description_plain' => $description_plain,
+				'thumb'            => $thumb,
+				'popup'            => $popup
 			);
 		}
 
@@ -128,12 +132,16 @@ class ControllerExtensionModuleProstorePortfolio extends Controller {
 				$thumb = 'image/placeholder.png';
 			}
 
+			// Plain text description for data attribute (strip HTML tags)
+			$description_plain = strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8'));
+
 			$data['portfolios'][] = array(
-				'portfolio_id' => $result['portfolio_id'],
-				'title'       => $result['title'],
-				'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, 150) . '...',
-				'thumb'       => $thumb,
-				'popup'       => $popup
+				'portfolio_id'       => $result['portfolio_id'],
+				'title'              => $result['title'],
+				'description'         => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, 150) . '...',
+				'description_plain'   => $description_plain,
+				'thumb'              => $thumb,
+				'popup'              => $popup
 			);
 		}
 
