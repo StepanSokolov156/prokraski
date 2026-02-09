@@ -1,0 +1,23 @@
+</p><div class="swiper-container swiper-gallery js-swiper-gallery">
+    <div class="swiper-wrapper">
+        {% for image in images %}
+        <div class="swiper-slide">
+            <picture>
+                <source type="image/webp" srcset="{{image.image}}">
+                <img src="{{image.image}}" alt="{{name}}" width="{{image_popup_width}}" height="{{image_popup_height}}" loading="lazy">
+            </picture>
+        </div>
+        {% endfor %}
+    </div>
+    <button class="swiper-prev js-swiper-gallery-prev">
+        <svg class="icon-prev"><use xlink:href="catalog/view/theme/prostore/sprites/sprite.svg#icon-prev"></use>
+        </svg>
+    </button>
+    <button class="swiper-next js-swiper-gallery-next">
+        <svg class="icon-next"><use xlink:href="catalog/view/theme/prostore/sprites/sprite.svg#icon-next"></use>
+        </svg>
+    </button>
+    <button class="swiper-fullscreen" data-fancybox-gallery="{{gallery}}">{{text_images}} {{imagescount}}<svg class="icon-fullscreen"><use xlink:href="catalog/view/theme/prostore/sprites/sprite.svg#icon-fullscreen"></use>
+        </svg>
+    </button>
+</div><p>

@@ -1,0 +1,38 @@
+# OpenCart specific
+config.php
+admin/config.php
+!system/config/
+!system/storage/vendor/
+
+# Storage (cache, logs, sessions, uploads)
+system/storage/cache/*
+system/storage/logs/*
+system/storage/session/*
+system/storage/upload/*
+system/storage/download/*
+system/storage/modification/*
+
+# Image cache
+image/cache/*
+image/cachewebp/*
+
+# Keep directories but ignore content
+!system/storage/cache/.gitkeep
+!system/storage/logs/.gitkeep
+!system/storage/session/.gitkeep
+!system/storage/upload/.gitkeep
+!system/storage/download/.gitkeep
+
+# Backup files
+*.bak
+*.sql
+*.sql.gz
+
+# OS specific
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Node modules (if any)
+node_modules/
