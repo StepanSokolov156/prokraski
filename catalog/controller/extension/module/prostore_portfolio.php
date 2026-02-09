@@ -25,16 +25,16 @@ class ControllerExtensionModuleProstorePortfolio extends Controller {
 		foreach ($results as $result) {
 			// Get popup image (full size)
 			if ($result['image']) {
-				$popup = $this->model_tool_image->resize($result['image'], 800, 800);
+				$popup = $this->model_tool_image->resize($result['image'], 1200, 1200);
 			} else {
 				$popup = '';
 			}
 
-			// Get thumbnail
+			// Get thumbnail - use original image for flexible sizing via CSS
 			if ($result['image']) {
-				$thumb = $this->model_tool_image->resize($result['image'], $width, $height);
+				$thumb = 'image/' . $result['image'];
 			} else {
-				$thumb = $this->model_tool_image->resize('placeholder.png', $width, $height);
+				$thumb = 'image/placeholder.png';
 			}
 
 			$data['portfolios'][] = array(
@@ -116,16 +116,16 @@ class ControllerExtensionModuleProstorePortfolio extends Controller {
 		foreach ($results as $result) {
 			// Get popup image (full size)
 			if ($result['image']) {
-				$popup = $this->model_tool_image->resize($result['image'], 800, 800);
+				$popup = $this->model_tool_image->resize($result['image'], 1200, 1200);
 			} else {
 				$popup = '';
 			}
 
-			// Get thumbnail
+			// Get thumbnail - use original image for flexible sizing via CSS
 			if ($result['image']) {
-				$thumb = $this->model_tool_image->resize($result['image'], 400, 400);
+				$thumb = 'image/' . $result['image'];
 			} else {
-				$thumb = $this->model_tool_image->resize('placeholder.png', 400, 400);
+				$thumb = 'image/placeholder.png';
 			}
 
 			$data['portfolios'][] = array(
